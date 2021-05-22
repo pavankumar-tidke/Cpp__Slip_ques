@@ -8,8 +8,9 @@ inline void minmax(int a, int b) {
 
 int main() {
 
-    minmax(2, 1);
+    minmax(2, 5);
 
+    // this 
 
     return 0;
 }
