@@ -7,8 +7,9 @@ inline void minmax(int a, int b) {
 }
 
 int main() {
-    
+
     minmax(2, 1);
+
 
     return 0;
 }
