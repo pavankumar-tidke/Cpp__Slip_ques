@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.rmd": "markdown",
+        "cstdlib": "cpp",
+        "system_error": "cpp",
+        "iostream": "cpp"
+    }
+}
