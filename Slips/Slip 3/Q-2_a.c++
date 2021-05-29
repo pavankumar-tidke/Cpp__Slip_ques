@@ -4,43 +4,59 @@ using namespace std;
 class Shapes {
 
     public:
-        virtual void area(int l=0, int b=0) = 0;
-        virtual void volume(int l=0, int b=0, int h=0) = 0;
+        virtual void area() = 0;
+        virtual void volume() = 0;
 };
 
 class Rectangle : public Shapes {
 
-    void area(int l, int b) {
-        cout<< "The area of rectangle :- "<< l*b<< endl;
+    public:
+        int le, br, hi;
+
+    Rectangle(int l=0, int b=0, int h=0) {
+        le = l;
+        br = b;
+        hi = h;
+    }   
+
+    void area() {
+        cout<< "The area of rectangle :- "<< le*br<< endl;
     }
 
-    void volume(int l, int b, int h) {
-        cout<< "The volume of rectangle :- "<< l*b*h<< endl;
+    void volume() {
+        cout<< "The volume of rectangle :- "<< le*br*hi<< endl;
     }
 };
 
 class Circle : public Shapes {
-    int r;
+    public:
+        int rd;
 
-    void area(int l, int b) {
-        r = l;
-        cout<< "The area of circle :- "<< 3.14*r*r<< endl;
+    Circle(int r=0) {
+        rd = r;
     }
-    void volume(int l, int b, int h) {}
+
+    void area() {
+        cout<< "The area of circle :- "<< 3.14*rd*rd<< endl;
+    }
+    void volume() {}
 };
 
 class Cylinder : public Shapes {
-    int r, h;
+    public:
+        int rd, hi;
 
-    void area(int l, int b) {// 2πrh+2πr2
-        r = l;
-        h = b;
-        cout<< "The area of cylinder :- "<< 2*3.14*r*h + 2*3.14*r*r << endl;
+    Cylinder(int r=0, int h=0) {
+        rd = r;
+        hi = h;
     }
 
-    void volume(int l, int b, int h) {
-        r = l;
-        cout<< "The area of cylinder :- "<< 3.14*r*r<< endl;
+    void area() {// 2πrh+2πr2
+        cout<< "The area of cylinder :- "<< 2*3.14*rd*hi + 2*3.14*rd*rd << endl;
+    }
+
+    void volume() {
+        cout<< "The area of cylinder :- "<< 3.14*rd*rd<< endl;
     }
 };
     
@@ -49,19 +65,19 @@ int main() {
 
     Shapes *base;
 
-    Rectangle rec;
+    Rectangle rec(10, 5, 15);
     base = &rec;
-    base->area(10, 5);
-    base->volume(10, 5, 15);
+    base->area();
+    base->volume();
 
-    Circle cir;
+    Circle cir(3);
     base = &cir;
-    base->area(3);
+    base->area();
 
-    Cylinder cyl;
+    Cylinder cyl(3, 5);
     base = &cyl;
-    base->area(3, 5);
-    base->volume(5, 4, 6);
+    base->area();
+    base->volume();
 
 
     return 0;
