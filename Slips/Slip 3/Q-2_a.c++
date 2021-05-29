@@ -44,7 +44,7 @@ class Cylinder : public Shapes {
     }
 };
     
-    
+
 int main() {
 
     Shapes *base;
@@ -61,7 +61,7 @@ int main() {
     Cylinder cyl;
     base = &cyl;
     base->area(3, 5);
-    base->volume(5, 4, 3);
+    base->volume(5, 4, 6);
 
 
     return 0;
