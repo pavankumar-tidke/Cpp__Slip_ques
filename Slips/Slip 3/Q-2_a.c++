@@ -20,21 +20,27 @@ class Rectangle : public Shapes {
 };
 
 class Circle : public Shapes {
+    int r;
 
     void area(int l, int b) {
-        cout<< "The area of circle :- "<< 3.14*l*l<< endl;
+        r = l;
+        cout<< "The area of circle :- "<< 3.14*r*r<< endl;
     }
     void volume(int l, int b, int h) {}
 };
 
 class Cylinder : public Shapes {
+    int r, h;
 
     void area(int l, int b) {// 2πrh+2πr2
-        cout<< "The area of cylinder :- "<< 2*3.14*l*b + 2*3.14*l*l << endl;
+        r = l;
+        h = b;
+        cout<< "The area of cylinder :- "<< 2*3.14*r*h + 2*3.14*r*r << endl;
     }
 
     void volume(int l, int b, int h) {
-        cout<< "The area of cylinder :- "<< 3.14*l*l<< endl;
+        r = l;
+        cout<< "The area of cylinder :- "<< 3.14*r*r<< endl;
     }
 };
 
