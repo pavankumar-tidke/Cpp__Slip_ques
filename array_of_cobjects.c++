@@ -22,9 +22,35 @@ using namespace std;
 //         cout << "This is object :- " << i+1;
 //         asus->r(1024*i);
 //     }
-    
+
 //     return 0;
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -34,8 +60,8 @@ class books {
     public:
         string title;
         float price;
-    
-    public: 
+
+    public:
         void getdata();
         void putdata();
 };
@@ -65,7 +91,7 @@ int main() {
         cout << "Book " << (i+1) << endl;
         book[i].putdata();
     }
-    
+
 
     return 0;
 }
