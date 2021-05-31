@@ -12,18 +12,18 @@ class Number{
     public:
         Number(int n): num(n){}
 
-        int operator +() {
+        int operator ++() {
             return ++num;
         }
-        int operator -() {
+        int operator --() {
             return --num;
         }
 };
 
 int main() {
     Number n1(5);
-    cout<< +n1 << endl;
-    cout<< -n1 <<endl;
+    cout<< ++n1 << endl;
+    cout<< --n1 <<endl;
 
     return 0;
 }
