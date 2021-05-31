@@ -13,7 +13,6 @@ class MyMatrix {
         int mtrix[2][3] = {{9,6,8}, {2,3,2}}, newMtr[3];
 
         void operator -() {
-            int j,m;
             for(int i=0; i<=2;i++) {
                 newMtr[i] = mtrix[0][i] - mtrix[1][i];
             }
